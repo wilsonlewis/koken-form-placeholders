@@ -7,6 +7,13 @@ class FormPlaceholdersPlugin extends KokenPlugin
 		$this->register_filter('site.output', 'placehold');
 	}
 
+    /**
+     * Add the text from a label as input placeholder text in Koken shortcode contact forms.
+     *
+     * @param  string $content
+     *
+     * @return string
+     */
 	public function placehold($content)
     {
         return preg_replace(
